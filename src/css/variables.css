@@ -1,0 +1,94 @@
+/* 
+   CV Vibe - Design Tokens & Custom Variables
+   Centralized variables for dynamic CV styling and editor UI theme.
+*/
+
+:root {
+    /* ==========================================================================
+       1. Editor UI Design Tokens (Light/Dark Mode Dashboard)
+       ========================================================================== */
+    --ui-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    /* Transition times */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Border Radius tokens */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+    
+    /* Box Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+
+    /* Sidebar and Form colors (Dark mode default for premium workspace look) */
+    --bg-app: #090d16;
+    --bg-panel: rgba(17, 24, 39, 0.7);
+    --bg-panel-border: rgba(255, 255, 255, 0.08);
+    --bg-input: rgba(10, 15, 30, 0.8);
+    --bg-input-border: rgba(255, 255, 255, 0.12);
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --text-active: #ffffff;
+    
+    --accent: #2563eb;
+    --accent-hover: #3b82f6;
+    --accent-light: rgba(37, 99, 235, 0.15);
+    
+    --bg-card: rgba(30, 41, 59, 0.4);
+    --bg-card-border: rgba(255, 255, 255, 0.05);
+    
+    --danger: #ef4444;
+    --danger-hover: #dc2626;
+    --success: #10b981;
+
+    /* ==========================================================================
+       2. CV Print Document Tokens (Modified dynamically by JS Customizer)
+       ========================================================================== */
+    --cv-accent-color: #0f172a;       /* Dynamic Theme Accent Color (Default Slate) */
+    --cv-accent-light: rgba(15, 23, 42, 0.08);
+    --cv-text-color: #334155;          /* Document dark grey body text */
+    --cv-text-muted: #64748b;         /* Document lighter details text */
+    --cv-bg-paper: #ffffff;           /* Document true A4 white */
+    
+    /* Spacing variables (Multiplier controlled by slider) */
+    --cv-spacing-scale: 1.0;
+    --cv-padding-side: calc(24px * var(--cv-spacing-scale));
+    --cv-padding-vertical: calc(20px * var(--cv-spacing-scale));
+    --cv-margin-gap: calc(16px * var(--cv-spacing-scale));
+    
+    /* A4 Rigid Boundary parameters (Standard printable specs) */
+    --a4-width: 210mm;
+    --a4-height: 297mm;
+    
+    /* Default Fonts (Overwritten dynamically) */
+    --cv-font-heading: 'Poppins', sans-serif;
+    --cv-font-body: 'Inter', sans-serif;
+}
+
+/* Light Mode overrides for the editor UI dashboard */
+body.editor-light-mode {
+    --bg-app: #f1f5f9;
+    --bg-panel: rgba(255, 255, 255, 0.85);
+    --bg-panel-border: rgba(0, 0, 0, 0.06);
+    --bg-input: #ffffff;
+    --bg-input-border: #cbd5e1;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-active: #0f172a;
+    
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-light: rgba(37, 99, 235, 0.1);
+    
+    --bg-card: rgba(255, 255, 255, 0.6);
+    --bg-card-border: rgba(0, 0, 0, 0.04);
+    
+    --danger: #ef4444;
+    --danger-hover: #b91c1c;
+}

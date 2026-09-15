@@ -1,0 +1,239 @@
+/* 
+   CV Vibe - Template 2: The Academic (Classic Minimalist Layout)
+   Clean single column layout. Serif luxury typography.
+   Centered header, bullet-separated contact items, plain clean timelines.
+*/
+
+.template-academic {
+    display: flex !important;
+    flex-direction: column;
+    padding: calc(30px * var(--cv-spacing-scale)) calc(35px * var(--cv-spacing-scale));
+    gap: calc(18px * var(--cv-spacing-scale));
+    min-height: 297mm;
+    box-sizing: border-box;
+}
+
+/* Centered classic header */
+.academic-header {
+    text-align: center;
+    border-bottom: 2px double var(--cv-accent-color);
+    padding-bottom: calc(12px * var(--cv-spacing-scale));
+    margin-bottom: calc(4px * var(--cv-spacing-scale));
+}
+
+.academic-name {
+    font-family: var(--cv-font-heading);
+    font-size: calc(26px * var(--cv-spacing-scale));
+    font-weight: 700;
+    color: var(--cv-accent-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.academic-title {
+    font-family: var(--cv-font-heading);
+    font-size: calc(13px * var(--cv-spacing-scale));
+    font-weight: 600;
+    font-style: italic;
+    color: var(--cv-text-muted);
+    margin-bottom: calc(8px * var(--cv-spacing-scale));
+}
+
+/* Inline contact links */
+.academic-contact-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(8px * var(--cv-spacing-scale)) calc(12px * var(--cv-spacing-scale));
+    font-size: calc(11px * var(--cv-spacing-scale));
+    color: var(--cv-text-color);
+    list-style: none;
+}
+
+.academic-contact-inline li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.academic-contact-inline li:not(:last-child)::after {
+    content: "•";
+    margin-left: 12px;
+    color: var(--cv-accent-color);
+}
+
+.academic-contact-inline a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.academic-contact-inline a:hover {
+    text-decoration: underline;
+}
+
+/* Standard single column section */
+.academic-section {
+    display: flex;
+    flex-direction: column;
+    gap: calc(8px * var(--cv-spacing-scale));
+}
+
+.academic-sec-title {
+    font-family: var(--cv-font-heading);
+    font-size: calc(12.5px * var(--cv-spacing-scale));
+    font-weight: 700;
+    color: var(--cv-accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1.5px solid var(--cv-accent-color);
+    padding-bottom: 2px;
+    margin-bottom: calc(4px * var(--cv-spacing-scale));
+}
+
+.academic-summary {
+    font-size: calc(12px * var(--cv-spacing-scale));
+    color: var(--cv-text-color);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Timeline Rows (Classic Academic layout) */
+.academic-list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(12px * var(--cv-spacing-scale));
+}
+
+.academic-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.academic-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.academic-item-main {
+    font-size: calc(12.5px * var(--cv-spacing-scale));
+    font-weight: 700;
+    color: var(--cv-accent-color);
+}
+
+.academic-item-sub {
+    font-size: calc(12px * var(--cv-spacing-scale));
+    font-style: italic;
+    color: var(--cv-text-muted);
+}
+
+.academic-item-date {
+    font-size: calc(11px * var(--cv-spacing-scale));
+    font-weight: 700;
+    color: var(--cv-accent-color);
+}
+
+.academic-item-desc {
+    font-size: calc(11.5px * var(--cv-spacing-scale));
+    color: var(--cv-text-color);
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* Skills list for classic - compact tags or bullet list */
+.academic-skills-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(6px * var(--cv-spacing-scale)) calc(12px * var(--cv-spacing-scale));
+    font-size: calc(11.5px * var(--cv-spacing-scale));
+    color: var(--cv-text-color);
+    list-style: none;
+}
+
+.academic-skills-inline li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.academic-skills-inline li:not(:last-child)::after {
+    content: ",";
+}
+
+.academic-skill-bold {
+    font-weight: 700;
+    color: var(--cv-accent-color);
+}
+
+.academic-skill-level {
+    font-style: italic;
+    color: var(--cv-text-muted);
+}
+
+/* Projects single column list */
+.academic-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(10px * var(--cv-spacing-scale));
+}
+
+.academic-proj-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.academic-proj-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.academic-proj-title {
+    font-size: calc(12px * var(--cv-spacing-scale));
+    font-weight: 700;
+    color: var(--cv-accent-color);
+}
+
+.academic-proj-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.academic-proj-title a:hover {
+    text-decoration: underline;
+}
+
+.academic-proj-role {
+    font-size: calc(11.5px * var(--cv-spacing-scale));
+    font-style: italic;
+    color: var(--cv-text-muted);
+}
+
+.academic-proj-desc {
+    font-size: calc(11.5px * var(--cv-spacing-scale));
+    color: var(--cv-text-color);
+    line-height: 1.5;
+}
+
+/* Certifications list for classic layout */
+.academic-certs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(6px * var(--cv-spacing-scale));
+    font-size: calc(11.5px * var(--cv-spacing-scale));
+}
+
+.academic-cert-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.academic-cert-item::before {
+    content: "•";
+    color: var(--cv-accent-color);
+    font-weight: 800;
+}
