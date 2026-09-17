@@ -46,6 +46,7 @@ body {
     font-size: 24px;
     background: linear-gradient(135deg, #60a5fa, #2563eb, #7c3aed);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: pulse-glow 3s infinite alternate;
 }
@@ -584,7 +585,6 @@ body {
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
     }
 
 }
